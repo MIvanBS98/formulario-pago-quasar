@@ -37,7 +37,7 @@
         />
 
         <div class="row">
-          <div class="col">
+          <div class="col fecha">
             <q-input
               class="q-pt-md"
               filled
@@ -48,8 +48,7 @@
               lazy-rules
               :rules="[
                 (val) =>
-                  (val && val.length > 0) ||
-                  'Por favor escriba la fecha de vencimiento de la tarjeta',
+                  (val && val.length > 0) || 'Escriba la fecha de vencimiento',
                 (val) =>
                   (val && val.length == 5) || 'Por favor escriba la fecha',
               ]"
@@ -210,7 +209,11 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-.cvv
-  padding-left: 15px
+<style>
+.cvv {
+  padding-left: 15px;
+}
+.fecha {
+  padding-bottom: 10px;
+}
 </style>
